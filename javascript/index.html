@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Sample Grokodile Implementation</title>
+    <link rel="script" href="/grokodile.js"/>
+  </head>
+  <body>
+    <h1>Hello world &lt;3</h1>
+    <p>
+      This is a test of whether grokadile is up and running. If you have a
+      cookie called 'grokadile' with some AES looking nonsense in it then
+      everything is up and running and just flipping awesome.
+    </p>
+    <script>
+      var grokodile = function(){
+        var http = new XMLHttpRequest();
+        http.withCredentials = true;
+        http.open("GET", "http://localhost:8000?r=" + document.referer, true);
+        http.send();
+      }
+
+      grokodile();
+    </script>
+  </body>
+</html>
